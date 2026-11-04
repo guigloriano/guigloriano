@@ -20,6 +20,47 @@ flowchart LR
     D -. "benchmark" .-> E["LCVF heuristic<br/>· Exact model (Gurobi)"]
 ```
 
+### 💼 Industry · MTR
+
+Analytics and data engineering for a virtual try-on (VTO) product embedded in e-commerce sites — from event tracking inside the iframe to server-side purchase attribution and reporting.
+
+```mermaid
+flowchart LR
+    VTO(["Virtual try-on iframe<br/>on client e-commerce sites"])
+
+    subgraph S1["1 · Tracking & collection"]
+        direction TB
+        A1["GTM containers<br/>centralized variables · cross-domain"]
+        A2["JS snippet + postMessage<br/>iframe ↔ parent page"]
+        A3["Custom funnel events<br/>dataLayer · GA4"]
+    end
+
+    subgraph S2["2 · Server-side attribution"]
+        direction TB
+        B1["GA4 client_id correlation<br/>PostgreSQL"]
+        B2["Order reconciliation<br/>Nuvemshop / Shopify APIs"]
+        B3["GA4 Measurement Protocol<br/>purchase events"]
+    end
+
+    subgraph S3["3 · Data warehouse"]
+        direction TB
+        C1["GA4 → BigQuery export<br/>multi-property migration"]
+        C2["SQL funnel & latency analysis"]
+    end
+
+    subgraph S4["4 · Insights"]
+        direction TB
+        D1["Looker Studio dashboards"]
+        D2["Data-storytelling reports<br/>Python · Chart.js"]
+    end
+
+    VTO --> S1 --> S2 --> S3 --> S4
+    A1 --- A2 --- A3
+    B1 --> B2 --> B3
+    C1 --> C2
+    D1 --- D2
+```
+
 ### 🛠️ Stack
 
 [![Stack](https://skillicons.dev/icons?i=py,c,js,postgres,gcp,aws,linux,latex,git,github&theme=dark)](https://skillicons.dev)
