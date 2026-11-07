@@ -86,6 +86,13 @@ flowchart LR
 [LinkedIn](https://www.linkedin.com/in/...) · [Lattes](http://lattes.cnpq.br/...) · [ORCID](https://orcid.org/...) · [Google Scholar](https://scholar.google.com/citations?user=...)
 -->
 
+### 📈 Contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=guigloriano&theme=github-dark-blue&hide_border=true" />
+  <img alt="GitHub contribution streak" src="https://streak-stats.demolab.com?user=guigloriano&hide_border=true" />
+</picture>
+
 ---
 
 <details>
